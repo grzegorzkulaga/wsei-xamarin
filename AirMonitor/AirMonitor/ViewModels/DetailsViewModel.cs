@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace AirMonitor.ViewModels
 {
-    public class DetailsViewModel : INotifyPropertyChanged
+    public class DetailsViewModel : BaseViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

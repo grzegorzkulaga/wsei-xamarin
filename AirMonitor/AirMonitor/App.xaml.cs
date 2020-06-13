@@ -12,10 +12,15 @@ namespace AirMonitor
 {
     public partial class App : Application
     {
+
         public static string AirlyApiKey { get; private set; }
+
         public static string AirlyApiUrl { get; private set; }
+
         public static string AirlyApiMeasurementUrl { get; private set; }
+
         public static string AirlyApiInstallationUrl { get; private set; }
+
 
         public App()
         {
@@ -24,12 +29,9 @@ namespace AirMonitor
             InitializeApp();
         }
 
-
-
         private async Task InitializeApp()
         {
             await LoadConfig();
-
             MainPage = new RootTabbedPage();
         }
 
@@ -45,6 +47,7 @@ namespace AirMonitor
                 {
                     var json = await reader.ReadToEndAsync();
                     var dynamicJson = JObject.Parse(json);
+                    
 
                     AirlyApiKey = dynamicJson["AirlyApiKey"].Value<string>();
                     AirlyApiUrl = dynamicJson["AirlyApiUrl"].Value<string>();

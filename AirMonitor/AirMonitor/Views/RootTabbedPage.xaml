@@ -5,14 +5,19 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             xmlns:views="clr-namespace:AirMonitor.Views"
             android:TabbedPage.ToolbarPlacement="Bottom">
-    <NavigationPage Title="Home" IconImageSource="baseline_home_black_24">
+    <NavigationPage Title="Home">
         <x:Arguments>
-            <views:HomePage/>
+            <views:DetailsPage/>
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Settings" IconImageSource="baseline_settings_black_24">
+    <NavigationPage Title="Map">
         <x:Arguments>
-            <views:SettingsPage/>
+            <views:MapPage/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="ListView">
+        <x:Arguments>
+            <views:HomePage/>
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>
